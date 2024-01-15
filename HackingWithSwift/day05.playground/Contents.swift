@@ -133,4 +133,15 @@ default:
 // the default will be run if all cases have failed to match.
 // https://www.hackingwithswift.com/quick-start/beginners/how-to-use-switch-statements-to-check-multiple-conditions
 
+// HOW TO USE THE TERNARY CONDITIONAL OPERATOR FOR QUICK TESTS
+
+// +, -, == are called binary operators because they work with two pieces of input
+// ternary operators work with three pieces of input
+// the ternary operator lets us check a condition and return one of two values: something if the condition is true, and something if it's false
+let age = 18
+let canVote = age >= 18 ? "Yes" : "No"
+// When that code runs, canVote will be set to “Yes” because age is set to 18.
+// the ternary operator is split into thre parts: a check (age >= 18), something for when the condition is true ("yes"), and soemthing for when the condition is false ("no"). that makes it exactly like a regular if and else block.
+
+
 

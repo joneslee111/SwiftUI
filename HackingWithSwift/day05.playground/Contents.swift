@@ -142,6 +142,11 @@ let age = 18
 let canVote = age >= 18 ? "Yes" : "No"
 // When that code runs, canVote will be set to “Yes” because age is set to 18.
 // the ternary operator is split into thre parts: a check (age >= 18), something for when the condition is true ("yes"), and soemthing for when the condition is false ("no"). that makes it exactly like a regular if and else block.
+// another example:
+let hour = 23
+print(hour < 12 ? "It's before noon" : "It's after noon")
+// you might be wondering why the ternary operator is useful, particularly when we have regular if/else conditions available to us. there are some times, particularly with SwiftUI, when we have no choice and must use a ternary.
+
 
 
 

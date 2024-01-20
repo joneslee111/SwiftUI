@@ -98,5 +98,52 @@ func greet(name: String) -> String {
 
 
 // HOW TO RETURN MULTIPLE VALUES FROM FUNCTIONS
-//
+
+// when you want to return a single value from a function, you write an arrow and a data type before your functions opening brace, like this:
+func isUppercase(string: String) -> Bool {
+    string == string.uppercased()
+}
+// if you want to return two or more values from a function, you could use an array
+// an array could be problematic, so we could use a dictionary instead, but that also cold be problematic
+
+// we could use instead, tuples. Like arrays, ditionaries, and sets, tuples let us put multiple pieces of data into a single variable,
+// but unlike those other options tuples have a fixed size and can have a variety of data types
+// for example:
+func getUser() -> (firstName: String, lastName: String) {
+    (firstName: "Taylor", lastName: "Swift")
+}
+
+let user = getUser()
+print("Name: \(user.firstName) \(user.lastName)")
+// our return type is (firstNane: String, lastName: String), which is a tuple containing two strings
+// each string in our tuple has a name. These arent in quotes: they are specific names for each item in our tuple
+// inside the function we send bck a tuple containing all the elements we promised, attached to the names: firstName is being set to "Taylor", etc
+// When we call getUser(), we can read the tuples values using the key names: firstName, lastName, etc.
+
+// tuples seem similar to dictionaries, but they are different:
+// - When you access values in a dictionary, Swift can't know ahead of time whether they are present or not.
+// - When you access values in a tuple, Swift does know ahed of time that it is available bevause the tuple says it will be available
+// - We access values using user.firstName: it's not a string, so theres no chance of typos
+// - Our dictionary might contain hundreds of other values alongside "firstName", but our tuple can't -
+// we must list all the values it will contain, and as a result it's guaranteed to contain them all and nothing else.
+
+// tuples have a clear dvantage of dictionaries: we specify exactly which values will exist and what types they have,
+// whereas dictionaries may or may not contain the values we're asking for.
+
+// there are three more importnt things to know when using tuples:
+// - If you're returning a tuple from a function, Swift already knows the names you're giving each item in the tuple,
+// so you dont need to repeat them when using return, like:
+func getUser() -> (firstName: String, lastName: String) {
+    ("Taylor", "Swift")
+}
+// - sometimes you'll find you're given tuples where the elements dont have naes.
+// when this occurs you can access the tuple's elements using numerical indices starting from 0, like:
+func getUser() -> (String, String) {
+    ("Taylor", "Swift")
+}
+
+let user = getUser()
+print("Name: \(user.0) \(user.1)")
+// - if a function returns a tuple you can actually pull the tuple apart into individual values if you want to
+
 

@@ -25,13 +25,14 @@ func squareRoot(num: Int) throws {
             break
         }
     }
-        if result != num {
-            throw OutOfBounds.noSquareRoot
-        }
+    
+    if result != num {
+        throw OutOfBounds.noSquareRoot
+    }
 }
 
 do {
-    try squareRoot(num: 500)
+    try squareRoot(num: 225)
 } catch OutOfBounds.tooLow {
     print("Too low of a number, try a number between 1 and 10,000")
 } catch OutOfBounds.tooHigh {

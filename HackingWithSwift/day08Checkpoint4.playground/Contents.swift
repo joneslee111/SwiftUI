@@ -1,12 +1,12 @@
-// DAY 08 CHECKPOINT 4
-
-// Write a function that accepts an integer from 1 through 10,000
-// return the integer square root of that number
-// some catches:
-// 1. You can't use swifts built in sqrt() function or similar - you need to find the square root yourself.
-// 2. if the number is less than 1 or greater than 10,000 you should throw an "out of bounds" error
-// 3. you should only consider integer square roots - dont worry about the square root of 3 being 1.732, for example
-// 4. if you cant find the square root, throw a "no root" error
+//// DAY 08 CHECKPOINT 4
+//
+//// Write a function that accepts an integer from 1 through 10,000
+//// return the integer square root of that number
+//// some catches:
+//// 1. You can't use swifts built in sqrt() function or similar - you need to find the square root yourself.
+//// 2. if the number is less than 1 or greater than 10,000 you should throw an "out of bounds" error
+//// 3. you should only consider integer square roots - dont worry about the square root of 3 being 1.732, for example
+//// 4. if you cant find the square root, throw a "no root" error
 
 enum OutOfBounds: Error {
     case tooLow, tooHigh, noSquareRoot
@@ -40,5 +40,6 @@ do {
 } catch OutOfBounds.noSquareRoot {
     print("No whole square root. Try another number")
 }
+
 
 

@@ -50,7 +50,7 @@ enum PasswordError: Error {
     case short, obvious
 }
 // this says there are two possile errors with password: short and obvious
-// the next step is to write a function that wil trigger one of those errors
+// the next step is to write a function that will trigger one of those errors
 // we're going to write a function that checks the strength of a password if its bad
 // - fewer than 5 characters or is extremely well known
 // then we'll throw an error, but for all other strings we return either "OK", "GOOD", or "EXCELLENT" ratings.

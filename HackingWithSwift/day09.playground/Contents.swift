@@ -25,7 +25,7 @@ var greetCopy: () -> Void = greetUser
 // 1. The empty parentheses marks a function that takes no parameters
 // 2. the arrow means just what it means when creating a function: we're about to declare the return type for the function.
 // 3. void means "nothing" - this function returns nothing. Sometimes you might see this written as (),
-// but we usually avoid that because it can be confused with the empty parameter list
+// but we usually avoid that because it can be confused with the empty parameter list.
 
 
 

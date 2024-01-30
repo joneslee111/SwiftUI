@@ -46,7 +46,7 @@ var greetCopy: () -> Void = greetUser
 
 // HOW TO USE TRAILING CLOSURES AND SHORTHAND SYNTAX
 
-// Here's the ode we ended up with at the end of the previous chapter
+// Here's the code we ended up with at the end of the previous chapter
 let team = ["Gloria", "Suzanne", "Piper", "Tiffany", "Tasha"]
 
 let captainFirstTeam = team.sorted(by: { (name1: String, name2: String) -> Bool in
@@ -84,7 +84,7 @@ let captainFirstTeam = team.sorted {
     
     return $0 < $1
 }
-// if our sorted() call was simpelr - e.g. if we just wanted to do a reverse sort then:
+// if our sorted() call was simpeler - e.g. if we just wanted to do a reverse sort then:
 let reverseTeam = team.sorted {
     return $0 > $1
 }
@@ -103,9 +103,9 @@ let reverseTeam = team.sorted { $0 > $1 }
 // firstly, the filter() function lets us run some code on every item in the array
 // it will send back a new array containing every item that reutrns true for the function
 // We could find all team players whose name begins with T like this:
-let tOnly = team.filter { $0.hasPrefix("T)") }
+let tOnly = team.filter { $0.hasPrefix("T") }
 print(tOnly)
-// This will pprint ["Tiffany", "Tasha"], because those are the only two team membrs whose name begins with T
+// This will print ["Tiffany", "Tasha"], because those are the only two team membrs whose name begins with T
 
 // The second is the map() function that lets us transform every item in the array using some code of our choosing,
 // and sends back a new array of all the transformed items:
@@ -125,7 +125,7 @@ print(uppercaseTeam)
 
 // HOW TO ACCEPT FUNCTIONS AS PARAMETERS
 
-// Here's a functiont hat generates an array of integers by repeating a function a certain number of times:
+// Here's a function that generates an array of integers by repeating a function a certain number of times:
 func makeArray(size: Int, using generator: () -> Int) -> [Int] {
     var numbers = [Int]()
 
